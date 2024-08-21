@@ -40,7 +40,10 @@ developing applications that use %{name}.
 %autosetup -p1
 
 %build
-%cmake
+export CXXFLAGS="%{optflags} -Wno-error=maybe-uninitialized -Wno-error=uninitialized"
+%cmake \
+    -DCMAKE_SKIP_INSTALL_RPATH=OFF \
+    -DVVENC_INSTALL_FULLFEATURE_APP=ON
 %cmake_build
 
 %install
@@ -48,6 +51,7 @@ developing applications that use %{name}.
 
 %files
 %{_bindir}/%{name}app
+%{_bindir}/%{name}FFapp
 
 %files libs
 %license LICENSE.txt
