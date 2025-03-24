@@ -1,5 +1,5 @@
 Name:           vvenc
-Version:        1.13.0
+Version:        1.13.1
 Release:        1%{?dist}
 Summary:        VVenC, the Fraunhofer Versatile Video Encoder
 License:        BSD-3-Clause
@@ -66,6 +66,9 @@ export CXXFLAGS="%{optflags} -Wno-error=maybe-uninitialized -Wno-error=uninitial
 %{_libdir}/pkgconfig/lib%{name}.pc
 
 %changelog
+* Mon Mar 24 2025 Simone Caronni <negativo17@gmail.com> - 1.13.1-1
+- Update to 1.13.1.
+
 * Mon Mar 17 2025 Simone Caronni <negativo17@gmail.com> - 1.13.0-1
 - Update to 1.13.0.
 
